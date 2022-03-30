@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:id="@+id/tittlelay"
+      android:weightSum="12"
+
+    ><TextView
+      android:id="@+id/text"
+      android:layout_width="0dp"
+      android:layout_weight="10"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+      android:padding="10dp"
+      android:background="@color/teal_700"
+      android:textColor="#FFF"
+      android:text="Instructions"
+      />
+      <Button
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:text="X"
+          android:id="@+id/dialogButtonOK"
+
+          android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+          android:textColor="@color/white"
+          android:background="#FF0000"
+          android:padding="10dp"/>
+  </LinearLayout>
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/tittlelay"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>
