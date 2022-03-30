@@ -251,9 +251,7 @@ public class VideoActivity extends AppCompatActivity implements OnPageChangeList
 
     public void printBookmarksTree(List<PdfDocument.Bookmark> tree, String sep) {
         for (PdfDocument.Bookmark b : tree) {
-
             Log.e(TAG, String.format("%s %s, p %d", sep, b.getTitle(), b.getPageIdx()));
-
             if (b.hasChildren()) {
                 printBookmarksTree(b.getChildren(), sep + "-");
             }
